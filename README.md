@@ -45,13 +45,17 @@ The following components are necessary to use this module:
 
 
 ### To install the module
-`puppet module install puppetlabs-cudawaf`
+``` bash
+puppet module install puppetlabs-cudawaf
+```
 
 ### To install in a specific environment
-`puppet module install puppetlabs-cudawaf --environment=<env-name>`
+``` bash
+puppet module install puppetlabs-cudawaf --environment=<env-name>
+```
 
 ### Installing the gem files on the Puppet Agent node:
-```
+``` bash
 /opt/puppetlabs/puppet/bin/gem install typoheus
 /opt/puppetlabs/puppet/bin/gem install rest-client
 ```
@@ -74,7 +78,7 @@ Example "credentials.json"
 The following example manifests can be used to create resources on the Barracuda Web Application Firewall:
 
 ### To create a HTTP Service:
-```
+``` puppet
 wafservices  { 'WAFSVC-1':
   ensure        => present,
   name          => 'WAFSERVICE',
@@ -91,7 +95,7 @@ wafservices  { 'WAFSVC-1':
 }
 ```
 ### To create a Real server:
-```
+``` puppet
 wafservers{ 'WAFSERVER-2':
   ensure => present,
   name => 'server2',
@@ -106,7 +110,7 @@ wafservers{ 'WAFSERVER-2':
 ```
 
 ### To Upload a Signed Certificate:
-```
+``` puppet
 wafcertificates{ 'WAFUPLOADSIGNEDCER-1':
   ensure => present,
   name => 'signedcert1',
@@ -120,7 +124,7 @@ wafcertificates{ 'WAFUPLOADSIGNEDCER-1':
 
 ```
 ### To Upload a Trusted Certificate:
-```
+``` puppet
 wafcertificates{ 'WAFUPLOADTRUSTEDCER-1':
   ensure => present,
   name => 'trustedcert1',
@@ -130,7 +134,7 @@ wafcertificates{ 'WAFUPLOADTRUSTEDCER-1':
 
 ```
 ### To Upload a Intermediary Signed Certificate:
-```
+``` puppet
 wafcertificates{ 'WAFUPLOADINTERMEDIATESIGNEDCER-1':
   ensure => present,
   name => 'signedcertint1',
@@ -145,7 +149,7 @@ wafcertificates{ 'WAFUPLOADINTERMEDIATESIGNEDCER-1':
 
 ```
 ### To Upload a Trusted Server Certificate:
-```
+``` puppet
 wafcertificates{ 'WAFUPLOADTRUSTEDSERVERCER-1':
   ensure => present,
   name => 'trustedservercert1',
@@ -154,7 +158,7 @@ wafcertificates{ 'WAFUPLOADTRUSTEDSERVERCER-1':
 }
 ```
 ### To connect the WAF to Barracuda Cloud Control
-```
+``` puppet
 wafcloudcontrol{ 'WAFCouldControl-1':
   ensure => present,
   connect_mode => 'cloud',
