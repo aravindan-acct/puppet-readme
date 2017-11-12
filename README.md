@@ -69,7 +69,7 @@ Example "credentials.json"
 ### Creating Resources
 The following example manifests can be used to create resources on the Barracuda Web Application Firewall:
 
-### To create a Service:
+### To create a HTTP Service:
 ```
 wafservices  { 'WAFSVC-1':
   ensure        => present,
@@ -100,20 +100,7 @@ wafservers{ 'WAFSERVER-2':
   comments => 'Server for ProdService',
 }
 ```
-### To create a Certificate:
-```
-wafcertificates{ 'WAFUPLOADSIGNEDCER-1':
-  ensure => present,
-  cer_name => 'wafuploadsignedcert1',
-  name => 'signedcert1',
-  signed_certificate => '/home/wafcertificates/fullchain.pem',
-  allow_private_key_export => 'yes',
-  type => 'pem',
-  key =>'/home/wafcertificates/privkey.pem',
-  assign_associated_key => 'no',
-  upload => 'signed',
-}
-```
+
 ### To Upload a Signed Certificate:
 ```
 wafcertificates{ 'WAFUPLOADSIGNEDCER-1':
