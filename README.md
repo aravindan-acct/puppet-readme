@@ -35,9 +35,10 @@ The detailed documentation on each of these REST API end points can be found her
 
 The following components are necessary to use this module:
 
-  * typoheus gem
-  * rest-client gem
-  * Barracuda Web Application Firewall firmware v9.1+
+  * A server running as a Puppet master.
+  * A Puppet agent running as a controller to the Barracuda WAF.
+  * A Barracuda Web Application Firewall running the firmware version v9.1 or above
+
 
 ### To install the module
 `puppet module install puppetlabs-cudawaf`
@@ -45,14 +46,14 @@ The following components are necessary to use this module:
 ### To install in a specific environment
 `puppet module install puppetlabs-cudawaf --environment=<env-name>`
 
-### Installing the gem files:
+### Installing the gem files on the Puppet Agent node:
 ```
 /opt/puppetlabs/puppet/bin/gem install typoheus
 /opt/puppetlabs/puppet/bin/gem install rest-client
 ```
-### Create a credentials file
+### Create a credentials file on the Puppet Agent node:
 
-Path ``` /etc/puppetlabs/puppet/credentials.json```
+Path ```/etc/puppetlabs/puppet/credentials.json```
 
 Example "credentials.json"
 
@@ -65,13 +66,8 @@ Example "credentials.json"
 
 ## Usage Examples
 
-### Before you begin
-
-1. A server running as a Puppet master.
-2. A Puppet agent running as a controller to the Barracuda WAF.
-3. A Barracuda Web Application Firewall running the firmware version v9.1 or above
-
 ### Creating Resources
+The following example manifests can be used to create resources on the Barracuda Web Application Firewall:
 
 ### To create a Service:
 ```
@@ -80,44 +76,42 @@ wafservices  { 'WAFSVC-1':
   name          => 'WAFSERVICE',
   type          => 'http',
   mask          => '255.255.255.255',
- ip_address    => '3.3.3.3',
- port          => '80',
- group         => 'default',
- vsite         => 'default',
- status                => 'On',
- address_version       => 'ipv4',
- enable_access_logs => 'Yes',
- svcname => 'ProdService',
-       }
+  ip_address    => '3.3.3.3',
+  port          => '80',
+  group         => 'default',
+  vsite         => 'default',
+  status                => 'On',
+  address_version       => 'ipv4',
+  enable_access_logs => 'Yes',
+  svcname => 'ProdService',
 }
 ```
 ### To create a Real server:
 ```
 wafservers{ 'WAFSERVER-2':
- ensure => present,
- name => 'server2',
- identifier=> 'IP Address',
- address_version => 'IPv4',
- status => 'In Service',
- ip_address => '8.8.8.8',
- service_name => 'demo_service_13',
- hostname => 'TEST',
- port => '80',
- comments => 'Creating the server',
+  ensure => present,
+  name => 'server2',
+  identifier=> 'IP Address',
+  address_version => 'IPv4',
+  status => 'In Service',
+  ip_address => '8.8.8.8',
+  service_name => 'ProdService',
+  port => '80',
+  comments => 'Server for ProdService',
 }
 ```
 ### To create a Certificate:
 ```
 wafcertificates{ 'WAFUPLOADSIGNEDCER-1':
- ensure => present,
- cer_name => 'wafuploadsignedcert1',
- name => 'signedcert1',
- signed_certificate => '/home/wafcertificates/fullchain.pem',
- allow_private_key_export => 'yes',
- type => 'pem',
- key =>'/home/wafcertificates/privkey.pem',
- assign_associated_key => 'no',
- upload => 'signed',
+  ensure => present,
+  cer_name => 'wafuploadsignedcert1',
+  name => 'signedcert1',
+  signed_certificate => '/home/wafcertificates/fullchain.pem',
+  allow_private_key_export => 'yes',
+  type => 'pem',
+  key =>'/home/wafcertificates/privkey.pem',
+  assign_associated_key => 'no',
+  upload => 'signed',
 }
 ```
 ### To Upload a Signed Certificate:
