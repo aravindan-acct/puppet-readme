@@ -51,7 +51,13 @@ The detailed documentation on each of these REST API end points can be found her
 
 ### Before you begin
 
-## Creating Resources
+This example assumes the following pre-existing infrastructure:
+1. A server running as a Puppet master.
+2. A Puppet agent running as a controller to the Barracuda WAF.
+3.
+
+
+### Creating Resources
 
 ### To create a Service:
 ```
