@@ -247,6 +247,47 @@ Specifies a description for the server
 
 ### `Certificates`
 
+### Signed Certificate Parameters
+#### `upload`
+#### `name`
+#### `type`
+#### `key_type`
+#### `signed_certificate`
+#### `assign_associated_key`
+#### `key`
+#### `intermediary_certificate`
+#### `allow_private_key_export`
+#### `password`
+
+### Trusted Server Certificate Parameters
+#### `upload`
+#### `name`
+#### `trusted_server_certificate`
+
+### Trusted CA Certificate Parameters
+#### `upload`
+#### `name`
+#### `trusted_certificate`
+
+### Self Signed Certificate Parameters
+#### `allow_private_key_export` "yes",
+#### `city` "string",
+#### `common_name` "string",
+#### `country_code` "string",
+#### `curve_type` "secp256r1",
+#### `key_size` "1024",
+#### `key_type`: "rsa",
+#### `name`: "string",
+#### `organization_name`: "string",
+#### `organization_unit`: "string",
+#### `san_certificate[
+    "DNS:<Provide the DNS domain name.>",
+    "Email:<Provide the Email.>",
+    "URI:<Provide the URI.>",
+    "IP:<Provide the IP.>"
+  ]`
+
+#### `state`: "string"
 
 ### `Cloud Control`
 
