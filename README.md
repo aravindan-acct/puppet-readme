@@ -280,12 +280,12 @@ Specifies a description for the server
 #### `name`: "string",
 #### `organization_name`: "string",
 #### `organization_unit`: "string",
-#### `san_certificate[
-    "DNS:<Provide the DNS domain name.>",
-    "Email:<Provide the Email.>",
-    "URI:<Provide the URI.>",
-    "IP:<Provide the IP.>"
-  ]`
+#### `san_certificate[`
+    `"DNS:<Provide the DNS domain name.>",`
+    `"Email:<Provide the Email.>",`
+    `"URI:<Provide the URI.>",`
+    `"IP:<Provide the IP.>"`
+  `]`
 
 #### `state`: "string"
 
