@@ -244,3 +244,17 @@ Specifies a description for the server
 ### `Certificates`
 
 ### `Cloud Control`
+
+### Barracuda Cloud Control Parameters
+
+#### connect_mode
+Specifies the mode of connections. Must be "cloud"
+
+#### password
+Specifies the password to be used for the cloud control connection. This should be available before using this resource type.
+
+#### state
+Specifies the state of the connection
+
+#### username
+Specifies the Barracuda Cloud Control username for the connection. This should be available before using this resource type.
