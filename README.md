@@ -173,7 +173,7 @@ wafcloudcontrol { 'WAFCouldControl-1':
 A Virtual Service is a combination of a Virtual IP (VIP) address and a TCP port, which listens and directs the traffic to the intended Service.
 
 ### Service Parameters
-```
+
 #### address-version
 Specifies the IP Protocol to be used with the service. Must be "IPv4",
 
@@ -215,12 +215,12 @@ Specifies the listening ip address for the service
 
 #### mask
 Specifies the subnet mask for the service
-```
+
 ### `Server`
 A server object can be used to configure the networking information of the back-end server to be hosted on the Barracuda Web Application Firewall. Multiple real servers can be added and configured to load balance the incoming traffic for a Service.
 
 ### Server Parameters
-```
+
 #### identifier
 Specifies if the server identifier should be an ip address i.e "IP Address" or a hostname i.e "hostname"
 
@@ -244,14 +244,14 @@ Specifies the port number to be bound with the server
 
 #### comments
 Specifies a description for the server
-```
+
 ### `Certificates`
-```
-```
+
+
 ### `Cloud Control`
 
 ### Barracuda Cloud Control Parameters
-```
+
 #### connect_mode
 Specifies the mode of connections. Must be "cloud"
 
@@ -263,4 +263,3 @@ Specifies the state of the connection
 
 #### username
 Specifies the Barracuda Cloud Control username for the connection. This should be available before using this resource type.
-```
