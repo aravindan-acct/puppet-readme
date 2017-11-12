@@ -177,43 +177,43 @@ A Virtual Service is a combination of a Virtual IP (VIP) address and a TCP port,
 #### `address-version`
 Specifies the IP Protocol to be used with the service. Must be "IPv4",
 
-#### status
+#### `status`
 Specifies if the service should be enabled "On" or disabled "Off"
 
-#### name
+#### `name`
 Specifies the name for the service. Must be a valid string
 
-#### port
+#### `port`
 Specifies the listening port for the service
 
-#### comments
+#### `comments`
 Specifies the description for the service
 
-#### enable-access-logs
+#### `enable-access-logs`
 Specifies if the service should be created with the access logs enabled i.e "Yes" or disabled i.e "No"
 
-#### session-timeout
+#### `session-timeout`
 Specifies the session idle timeout. Must be a valid number or 0
 
-#### app-id
+#### `app-id`
 Specifies the app-id for the service
 
-#### group
+#### `group`
 Specifies the service group in which the Service is to be created. Must be a group present in the WAF.
 
-#### vsite
+#### `vsite`
 Specifies the vsite object in which the Service will be created.
 
-#### type
+#### `type`
 Specifies the type of service to be created. Example: HTTP or HTTPS
 
-#### dps-enabled
+#### `dps-enabled`
 Specifies if the service should have Advanced DdoS Prevention service enabled i.e "Yes" or disabled i.e "No",
 
-#### ip-address
+#### `ip-address`
 Specifies the listening ip address for the service
 
-#### mask
+#### `mask`
 Specifies the subnet mask for the service
 
 ### `Server`
@@ -221,28 +221,28 @@ A server object can be used to configure the networking information of the back-
 
 ### Server Parameters
 
-#### identifier
+#### `identifier`
 Specifies if the server identifier should be an ip address i.e "IP Address" or a hostname i.e "hostname"
 
-#### address-version
+#### `address-version`
 Specifies IP Protocol. Must be IPv4
 
-#### status
+#### `status`
 Specifies if the real server should be enabled or disabled. Must be set as one of In Service, Out of Service Maintenance, Out of Service Sticky, Out of Service All
 
-#### name
+#### `name`
 Specifies the name for the server
 
-#### ip-address
+#### `ip-address`
 Specifies the ip address for the server. Must be set if the identifier is set as "IP Address"
 
-#### hostname
+#### `hostname`
 Specifies the hostname for the server. Must be set if the identifier is set as "hostname"
 
-#### port
+#### `port`
 Specifies the port number to be bound with the server
 
-#### comments
+#### `comments`
 Specifies a description for the server
 
 ### `Certificates`
@@ -252,14 +252,14 @@ Specifies a description for the server
 
 ### Barracuda Cloud Control Parameters
 
-#### connect_mode
+#### `connect_mode`
 Specifies the mode of connections. Must be "cloud"
 
-#### password
+#### `password`
 Specifies the password to be used for the cloud control connection. This should be available before using this resource type.
 
-#### state
+#### `state`
 Specifies the state of the connection
 
-#### username
+#### `username`
 Specifies the Barracuda Cloud Control username for the connection. This should be available before using this resource type.
