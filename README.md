@@ -163,49 +163,51 @@ wafcloudcontrol{ 'WAFCouldControl-1':
 
 ### Parameters
 
-1. `Service` - A Virtual Service is a combination of a Virtual IP (VIP) address and a TCP port, which listens and directs the traffic to the intended Service.
+### 1. `Service`
+A Virtual Service is a combination of a Virtual IP (VIP) address and a TCP port, which listens and directs the traffic to the intended Service.
 
 
-### address-version
+#### address-version
 Specifies the IP Protocol to be used with the service. Must be "IPv4",
 
-### status
+#### status
 Specifies if the service should be enabled "On" or disabled "Off"
 
-### name
+#### name
 Specifies the name for the service. Must be a valid string
 
-### port
+#### port
 Specifies the listening port for the service
 
-### comments
+#### comments
 Specifies the description for the service
 
-### enable-access-logs
+#### enable-access-logs
 Specifies if the service should be created with the access logs enabled i.e "Yes" or disabled i.e "No"
 
-### session-timeout
+#### session-timeout
 Specifies the session idle timeout. Must be a valid number or 0
 
-### app-id
+#### app-id
 Specifies the app-id for the service
 
-### group
+#### group
 Specifies the service group in which the Service is to be created. Must be a group present in the WAF.
 
-### vsite
+#### vsite
 Specifies the vsite object in which the Service will be created.
 
-### type
+#### type
 Specifies the type of service to be created. Example: HTTP or HTTPS
 
-### dps-enabled
+#### dps-enabled
 Specifies if the service should have Advanced DdoS Prevention service enabled i.e "Yes" or disabled i.e "No",
 
-### ip-address
+#### ip-address
 Specifies the listening ip address for the service
 
-### mask
+#### mask
 Specifies the subnet mask for the service
 
-2. `Server` - A server object can be used to configure the networking information of the back-end server to be hosted on the Barracuda Web Application Firewall. Multiple real servers can be added and configured to load balance the incoming traffic for a Service.
+### 2. `Server`
+A server object can be used to configure the networking information of the back-end server to be hosted on the Barracuda Web Application Firewall. Multiple real servers can be added and configured to load balance the incoming traffic for a Service.
