@@ -215,7 +215,31 @@ Specifies the subnet mask for the service
 ### `Server`
 A server object can be used to configure the networking information of the back-end server to be hosted on the Barracuda Web Application Firewall. Multiple real servers can be added and configured to load balance the incoming traffic for a Service.
 
-### `Server Parameters`
+### Server Parameters
+
+#### identifier
+Specifies if the server identifier should be an ip address i.e "IP Address" or a hostname i.e "hostname"
+
+#### address-version
+Specifies IP Protocol. Must be IPv4
+
+#### status
+Specifies if the real server should be enabled or disabled. Must be set as one of In Service, Out of Service Maintenance, Out of Service Sticky, Out of Service All
+
+#### name
+Specifies the name for the server
+
+#### ip-address
+Specifies the ip address for the server. Must be set if the identifier is set as "IP Address"
+
+#### hostname
+Specifies the hostname for the server. Must be set if the identifier is set as "hostname"
+
+#### port
+Specifies the port number to be bound with the server
+
+#### comments
+Specifies a description for the server
 
 ### `Certificates`
 
