@@ -20,12 +20,14 @@ This module can be used to configure the Barracuda Web Application Firewall usin
 The detailed documentation on each of these REST API end points can be found here : [Barracuda Web Application REST API v3](https://campus.barracuda.com/product/webapplicationfirewall/api)
 
 ## Setup
+
+### To install the module
 `puppet module install puppetlabs-cudawaf`
 
-## To install in a specific environment
+### To install in a specific environment
 `puppet module install puppetlabs-cudawaf --environment=<env-name>`
 
-## Setup Requirements
+### Setup Requirements
 
 Installing the gem files:
 `/opt/puppetlabs/puppet/bin/gem install typoheus`
