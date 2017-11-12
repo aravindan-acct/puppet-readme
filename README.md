@@ -6,11 +6,11 @@
 2. [Types](#resource-types)
 2. [Setup - The basics of getting started with cudawaf](#setup)
 3. [Usage - Configuration options and additional functionality](#usage-examples)
-4. [Reference - An under-the-hood peek at what the module is doing and how](Reference)
-  * [Service](#Service)
-  * [Server](#Server)
-  * [Certificates](#Certificates)
-  * [Cloud Control](#Cloud-Control)
+4. [Reference - An under-the-hood peek at what the module is doing and how](reference)
+  * [Service](#service)
+  * [Server](#server)
+  * [Certificates](#certificates)
+  * [Cloud Control](#cloud-control)
 
 
 ## Description
