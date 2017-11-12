@@ -174,7 +174,7 @@ A Virtual Service is a combination of a Virtual IP (VIP) address and a TCP port,
 
 ### Service Parameters
 
-#### address-version
+#### `address-version`
 Specifies the IP Protocol to be used with the service. Must be "IPv4",
 
 #### status
