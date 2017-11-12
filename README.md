@@ -165,7 +165,7 @@ wafcloudcontrol{ 'WAFCouldControl-1':
 
 1. `Service` - A Virtual Service is a combination of a Virtual IP (VIP) address and a TCP port, which listens and directs the traffic to the intended Service.
 
-```
+
 ### address-version
 Specifies the IP Protocol to be used with the service. Must be "IPv4",
 
@@ -207,5 +207,5 @@ Specifies the listening ip address for the service
 
 ### mask
 Specifies the subnet mask for the service
-```
+
 2. `Server` - A server object can be used to configure the networking information of the back-end server to be hosted on the Barracuda Web Application Firewall. Multiple real servers can be added and configured to load balance the incoming traffic for a Service.
