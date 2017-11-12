@@ -27,7 +27,9 @@ The following features can be configured using this module:
 
 2. `Server` - A server object can be used to configure the networking information of the back-end server to be hosted on the Barracuda Web Application Firewall. Multiple real servers can be added and configured to load balance the incoming traffic for a Service.
 
-3. `Certificates` - A signed certificate is a digital identity document that enables both server and client to authenticate each other.  Certificates are used with HTTPS protocol to encrypt secure information transmitted over the internet.  A certificate can be generated or procured from a third party Certificate Authority (CA). Generated certificates can be self-signed or signed by a trusted third-party CA. A certificate contains information such as user name, expiration date, a unique serial number assigned to the certificate by a trusted CA, the public key, and the name of the CA that issued the certificate.
+3. `Certificates` - A signed certificate is a digital identity document that enables both server and client to authenticate each other.  Certificates are used with HTTPS protocol to encrypt secure information transmitted over the internet.  A certificate can be generated or procured from a third party Certificate Authority (CA).
+
+Generated certificates can be self-signed or signed by a trusted third-party CA. A certificate contains information such as user name, expiration date, a unique serial number assigned to the certificate by a trusted CA, the public key, and the name of the CA that issued the certificate.
 
 4. `Cloud-control` - A comprehensive cloud-based service that enables administrators to monitor and configure multiple Barracuda Networks products from a single console.
 
