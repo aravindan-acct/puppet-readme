@@ -84,7 +84,7 @@ wafservices  { 'WAFSVC-1':
   name          => 'WAFSERVICE',
   type          => 'http',
   mask          => '255.255.255.255',
-  ip_address    => '3.3.3.3',
+  ip_address    => '10.0.0.1',
   port          => '80',
   group         => 'default',
   vsite         => 'default',
@@ -102,7 +102,7 @@ wafservers { 'WAFSERVER-2':
   identifier=> 'IP Address',
   address_version => 'IPv4',
   status => 'In Service',
-  ip_address => '8.8.8.8',
+  ip_address => '192.168.1.10',
   service_name => 'ProdService',
   port => '80',
   comments => 'Server for ProdService',
@@ -280,12 +280,13 @@ Specifies a description for the server
 #### `name`: "string",
 #### `organization_name`: "string",
 #### `organization_unit`: "string",
+
 #### `san_certificate[`
-    `"DNS:<Provide the DNS domain name.>",`
-    `"Email:<Provide the Email.>",`
-    `"URI:<Provide the URI.>",`
-    `"IP:<Provide the IP.>"`
-  `]`
+####    `"DNS:<Provide the DNS domain name.>",`
+####    `"Email:<Provide the Email.>",`
+####    `"URI:<Provide the URI.>",`
+####    `"IP:<Provide the IP.>"`
+####  `]`
 
 #### `state`: "string"
 
