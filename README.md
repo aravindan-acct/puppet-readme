@@ -4,9 +4,6 @@
 
 1. [Description](#description)
 2. [Setup - The basics of getting started with cudawaf](#setup)
-    * [What cudawaf affects](#what-cudawaf-affects)
-    * [Setup requirements](#setup-requirements)
-    * [Beginning with cudawaf](#beginning-with-cudawaf)
 3. [Usage - Configuration options and additional functionality](#usage-examples)
 4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 5. [Limitations - OS compatibility, etc.](#limitations)
@@ -144,14 +141,3 @@ wafcloudcontrol{ 'WAFCouldControl-1':
   password => 'password'
 }
 ```
-
-## Development
-
-Since your module is awesome, other users will want to play with it. Let them
-know what the ground rules for contributing are.
-
-## Release Notes/Contributors/Etc.
-
-If you aren't using changelog, put your release notes here (though you should
-consider using changelog). You can also add any additional sections you feel
-are necessary or important to include here. Please use the `## ` header.
