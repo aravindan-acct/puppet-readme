@@ -32,6 +32,9 @@ The detailed documentation on each of these REST API end points can be found her
 ## Setup
 
 ### Pre-Requisites
+
+The following components are necessary to use this module:
+
   * typoheus gem
   * rest-client gem
   * Barracuda Web Application Firewall firmware v9.1+
@@ -50,6 +53,7 @@ The detailed documentation on each of these REST API end points can be found her
 ### Create a credentials file
 
 Path ``` /etc/puppetlabs/puppet/credentials.json```
+
 Example "credentials.json"
 
 ```
