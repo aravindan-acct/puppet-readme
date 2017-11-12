@@ -1,6 +1,6 @@
 # cudawaf
 
-#### Table of Contents
+## Table of Contents
 
 1. [Description](#description)
 2. [Types](#resource-types)
@@ -11,10 +11,12 @@
 
 ## Description
 
-With hundreds of lines of code to check - and vulnerabilities often subtle and hard to find - a serious data breach is often the first sign that a web application has problems. Having secured thousands of production applications against more than 11 billion attacks since 2008, the Barracuda Web Application Firewall is the ideal solution for organizations looking to protect web applications from data breaches and defacement. With the Barracuda Web Application Firewall, administrators do not need to wait for clean code or even know how an application works to secure their applications. Organizations can ensure robust security with a Barracuda Web Application Firewall hardware or virtual appliance, deployed either on-premises or in the cloud.
-This module can be used to configure the Barracuda Web Application Firewall using Puppet. The following features can be configured using this module:
+With the Barracuda Web Application Firewall, administrators do not need to wait for clean code or even know how an application works to secure their applications. Organizations can ensure robust security with a Barracuda Web Application Firewall hardware or virtual appliance, deployed either on-premises or in the cloud.
+This module enables management of the Barracuda Web Application Firewall using Puppet.
 
 ## Resource Types
+
+The following features can be configured using this module:
 
 1. `Service` - A Virtual Service is a combination of a Virtual IP (VIP) address and a TCP port, which listens and directs the traffic to the intended Service.
 
@@ -25,15 +27,14 @@ This module can be used to configure the Barracuda Web Application Firewall usin
 
 4. `Cloud-control` - A comprehensive cloud-based service that enables administrators to monitor and configure multiple Barracuda Networks products from a single console.
 
-
-
 The detailed documentation on each of these REST API end points can be found here : [Barracuda Web Application REST API v3](https://campus.barracuda.com/product/webapplicationfirewall/api)
 
 ## Setup
 
-### Requirements
+### Pre-Requisites
   * typoheus gem
   * rest-client gem
+  * Barracuda Web Application Firewall firmware v9.1+
 
 ### To install the module
 `puppet module install puppetlabs-cudawaf`
@@ -46,16 +47,25 @@ The detailed documentation on each of these REST API end points can be found her
 /opt/puppetlabs/puppet/bin/gem install typoheus
 /opt/puppetlabs/puppet/bin/gem install rest-client
 ```
+### Create a credentials file
+
+Path ``` /etc/puppetlabs/puppet/credentials.json```
+Example "credentials.json"
+
+```
+{
+  "username":"admin",
+  "password":"admin"
+}
+```
 
 ## Usage Examples
 
 ### Before you begin
 
-This example assumes the following pre-existing infrastructure:
 1. A server running as a Puppet master.
 2. A Puppet agent running as a controller to the Barracuda WAF.
-3.
-
+3. A Barracuda Web Application Firewall running the firmware version v9.1 or above
 
 ### Creating Resources
 
