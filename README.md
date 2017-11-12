@@ -96,7 +96,7 @@ wafservices  { 'WAFSVC-1':
 ```
 ### To create a Real server:
 ``` puppet
-wafservers{ 'WAFSERVER-2':
+wafservers { 'WAFSERVER-2':
   ensure => present,
   name => 'server2',
   identifier=> 'IP Address',
@@ -111,7 +111,7 @@ wafservers{ 'WAFSERVER-2':
 
 ### To Upload a Signed Certificate:
 ``` puppet
-wafcertificates{ 'WAFUPLOADSIGNEDCER-1':
+wafcertificates { 'WAFUPLOADSIGNEDCER-1':
   ensure => present,
   name => 'signedcert1',
   signed_certificate => '/home/wafcertificates/root.pem',
@@ -125,7 +125,7 @@ wafcertificates{ 'WAFUPLOADSIGNEDCER-1':
 ```
 ### To Upload a Trusted Certificate:
 ``` puppet
-wafcertificates{ 'WAFUPLOADTRUSTEDCER-1':
+wafcertificates { 'WAFUPLOADTRUSTEDCER-1':
   ensure => present,
   name => 'trustedcert1',
   trusted_certificate => '/home/wafcertificates/cer.pem',
@@ -135,7 +135,7 @@ wafcertificates{ 'WAFUPLOADTRUSTEDCER-1':
 ```
 ### To Upload a Intermediary Signed Certificate:
 ``` puppet
-wafcertificates{ 'WAFUPLOADINTERMEDIATESIGNEDCER-1':
+wafcertificates { 'WAFUPLOADINTERMEDIATESIGNEDCER-1':
   ensure => present,
   name => 'signedcertint1',
   signed_certificate => '/home/wafcertificates/root.pem',
@@ -150,7 +150,7 @@ wafcertificates{ 'WAFUPLOADINTERMEDIATESIGNEDCER-1':
 ```
 ### To Upload a Trusted Server Certificate:
 ``` puppet
-wafcertificates{ 'WAFUPLOADTRUSTEDSERVERCER-1':
+wafcertificates { 'WAFUPLOADTRUSTEDSERVERCER-1':
   ensure => present,
   name => 'trustedservercert1',
   trusted_server_certificate => '/home/wafcertificates/cer.pem',
@@ -159,7 +159,7 @@ wafcertificates{ 'WAFUPLOADTRUSTEDSERVERCER-1':
 ```
 ### To connect the WAF to Barracuda Cloud Control
 ``` puppet
-wafcloudcontrol{ 'WAFCouldControl-1':
+wafcloudcontrol { 'WAFCouldControl-1':
   ensure => present,
   connect_mode => 'cloud',
   state => 'connected',
