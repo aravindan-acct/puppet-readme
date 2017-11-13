@@ -6,7 +6,7 @@
 2. [Types](#resource-types)
 2. [Setup - The basics of getting started with cudawaf](#setup)
 3. [Usage - Configuration options and additional functionality](#usage-examples)
-4. [Reference - An under-the-hood peek at what the module is doing and how](reference)
+4. [Reference - An under-the-hood peek at what the module is doing and how](reference---an-under-the-hood-peek-at-what-the-module-is-doing-and-how)
   * [Service](#service)
   * [Server](#server)
   * [Certificates](#certificates)
